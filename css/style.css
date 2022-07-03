@@ -11,7 +11,7 @@ body{
 .header-wrapper{
     height: 100vh;
     width: 100%;
-    background: linear-gradient(-45deg, #050404, #76ec76, #35f135, #02f502);
+    background: linear-gradient(-45deg, #050404, #2E1C2B, #4A1942, #893168);
     background-size: 400% 400%;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@ h2{
 }
 
 a:hover{
-    color: #76ec76;
+    color: #2E1C2B;
     background-color: #fff;
 }
 
@@ -152,7 +152,7 @@ a:hover{
 
 .menu-items ul li a{
     margin: 10px 0;
-    color: #76ec76;
+    color: #2E1C2B;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -163,7 +163,7 @@ a:hover{
 
 #toggle:checked + .checkbox .trace:nth-child(1){
     transform: rotate(45deg);
-    background-color: #76ec76;
+    background-color: #2E1C2B;
     top: 47px;
 }
 
@@ -176,7 +176,7 @@ a:hover{
 
 #toggle:checked + .checkbox .trace:nth-child(3){
     transform: rotate(-45deg);
-    background-color: #76ec76;
+    background-color: #2E1C2B;
     top: 48px;
 }
 
@@ -289,6 +289,8 @@ a:hover{
     visibility: visible;
 }
 
+/* FOOTER */
+
 .footer{
     height: 100px;
     width: 100%;
@@ -299,6 +301,44 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #76ec76;
+    background-color: #2E1C2B;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px){
+    .social-medi{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container{
+        margin-top: 0;
+    }
+
+    .card-container{
+        flex-direction: column;
+    }
+
+    .container .card-container:nth-child(1),
+    .container .card-container:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .card{
+        height: 250px;
+        width: 250px;
+    }
+
+    .card-text{
+        width: 90%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .card:hover > .card-wrapper::before{
+        height: 190px;
+        width: 190px;
+    }
 }
 
